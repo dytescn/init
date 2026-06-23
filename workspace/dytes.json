@@ -1,0 +1,8 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "workspace for piksel",
+  "keywords": ["ai", "chat"],
+  "author": "funxdata",
+  "type": "web"
+}

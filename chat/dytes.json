@@ -1,0 +1,8 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "chat for piksel",
+  "keywords": ["ai", "chat"],
+  "author": "funxdata",
+  "type": "web"
+}
