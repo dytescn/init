@@ -11,8 +11,8 @@
         "@funxdata/pages/tplstype": "jsr:@funxdata/pages@^0.0.24/tpls",
         "@funxdata/pages/routetype": "jsr:@funxdata/pages@^0.0.24/router",
         "@funxdata/toolkit": "jsr:@funxdata/funxdata@^0.1.36",
-        "@funxdata/webdx": "jsr:@funxdata/webdx@^0.0.9",
-        "@funxdata/webdx/dxhttp": "jsr:@funxdata/webdx@^0.0.9/dxhttp",
+        "@funxdata/webdx": "jsr:@funxdata/webdx@^0.1.1",
+        "@funxdata/webdx/dxhttp": "jsr:@funxdata/webdx@^0.1.1/dxhttp",
         "tailwindcss": "npm:tailwindcss@^4.3.1"
     },
     "compilerOptions": {

@@ -3,8 +3,8 @@ export const create_project_tpl = `
     <div class="vg-dialog" id="dialog">
          <div class="vg-dialog-header">新建项目</div>
          <div class="vg-dialog-body">
-             <div class="vg-input" id="name_dom">
-             <input placeholder="请输入项目名称">
+             <div class="vg-input">
+             <input id="project_name"  placeholder="请输入项目名称">
                  <p class="error-tip"></p>
              </div>
          </div>
@@ -14,5 +14,4 @@ export const create_project_tpl = `
          </div>
      </div>
 </section>
-
 `
