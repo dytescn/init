@@ -1,8 +1,15 @@
 {
   "name": "init",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "init for piksel",
   "keywords": ["init", "chat"],
   "author": "funxdata",
-  "type": "web"
+  "type": "web",
+  "license": "MIT",
+  "dependencies-web": {},
+  "exports": {
+    "./assets/init_app_0_0_1.js": "init.js",
+    "./assets/init_setup_0_0_1.js": "setup.js"
+  },
+  "init":["./setup.js"]
 }

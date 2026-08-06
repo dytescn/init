@@ -4,5 +4,11 @@
   "description": "project for piksel",
   "keywords": ["project"],
   "author": "funxdata",
-  "type": "web"
+  "type": "web",
+  "dependencies-web": {},
+  "exports": {
+    "./assets/project_app_0_0_1.js": "chat.js",
+    "./assets/project_setup_0_0_1.js": "setup.js"
+  },
+  "init":["./setup.js"]
 }

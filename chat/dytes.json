@@ -2,7 +2,14 @@
   "name": "chat",
   "version": "1.0.0",
   "description": "chat for piksel",
-  "keywords": ["ai", "chat"],
+  "keywords": ["piksel","ai", "chat"],
   "author": "funxdata",
-  "type": "web"
+  "type": "web",
+  "license": "MIT",
+  "dependencies-web": {},
+  "exports": {
+    "./assets/project_app_0_0_1.js": "chat.js",
+    "./assets/project_setup_0_0_1.js": "setup.js"
+  },
+  "init":["./setup.js"]
 }
