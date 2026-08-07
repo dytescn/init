@@ -1,13 +1,16 @@
 export const project_card_tpl = `
-<div class="vg-cards cards-content-img" uuid="d62ee3fe933d47d6878059f80a527d23">
-    <div class="cards-images-container">
-        <div class="cards-img-images" style="background-image: url('');"></div>
-    </div>
-    <p class="cards-img-tip vg-avatar-bg avatar-size-sm not-bg" style="background-image: url('https://book.funxdata.com/public/img/webmanage/AI.png');">
-    </p>
-    <div class="cards-img-name">
-        <p class="name mb-2">导视项目</p>
-        <p class="span ">更新于：<span>2024-11-19 15:30</span></p>
-    </div>
-</div>
+  <% it.projects.forEach(function(rowitem){ %>
+        <a class="vg-cards cards-content-img" href="/workspace?uuid=<%= rowitem.uuid || '' %>">
+        <div class="cards-images-container">
+            <div class="cards-img-images" style="background-image: url('<%= rowitem.cover || '/assets/imgs/default-cover.png' %>');"></div>
+        </div>
+        <p class="cards-img-tip vg-avatar-bg avatar-size-sm not-bg" 
+            style="background-image: url('https://book.funxdata.com/public/img/webmanage/AI.png');">
+        </p>
+        <div class="cards-img-name">
+            <p class="name mb-2"><%= rowitem.name || '未命名' %></p>
+            <p class="span">更新于：<span><%= rowitem.updated_at ? new Date(rowitem.updated_at).toLocaleString() : '' %></span></p>
+        </div>
+        </a>
+    <% }) %>
 `;

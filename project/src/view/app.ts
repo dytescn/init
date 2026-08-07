@@ -29,7 +29,7 @@ export const app_tpl = `
                <div class="vg-card-tables row rowcolumn flex1 bg-gray-50 gap-10">
                  <div class="pages-project-module row rowcolumn flex1 bg-white pcol-16 pb-16 border-radius-lg">
                    <div class="pages-project-body row rowcolumn flex1" id="project_all">
-                      <div class="pages-project-addproject" id="add_project">
+                      <div class="pages-project-addproject vg-card" id="add_project">
                       <div class="addproject-container">
                       <i class="vg-icon ic-plus"></i>
                       <p class="text mt-8">创建项目</p>
