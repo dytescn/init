@@ -7,13 +7,13 @@ export const chat_form_tpl = `
     data-slot="aui_thread-viewport"
     class="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-smooth px-4 pt-4 justify-center"
   >
-    <div class="aui-thread-welcome-root mx-auto mb-6 flex w-full max-w-(--thread-max-width) flex-col items-center px-4 text-center">
-      <h1
-        class="aui-thread-welcome-message-inner fade-in slide-in-from-bottom-1 animate-in fill-mode-both text-2xl font-semibold duration-200"
-      >
-        开始新的设计
-      </h1>
-    </div>
+    <% if (!it.uid) { %>
+      <div class="aui-thread-welcome-root mx-auto mb-6 flex w-full max-w-(--thread-max-width) flex-col items-center px-4 text-center">
+        <h1 class="aui-thread-welcome-message-inner fade-in slide-in-from-bottom-1 animate-in fill-mode-both text-2xl font-semibold duration-200">
+          开始新的设计
+        </h1>
+      </div>
+    <% } %>
     <div
       data-slot="aui_message-group"
       class="mb-14 flex flex-col gap-y-6 empty:hidden"
@@ -71,7 +71,7 @@ export const chat_form_tpl = `
               <p dir="auto"><br /></p>
             </div>
             <div class="aui-lexical-placeholder">
-              Send a message... (@ to mention, / for commands)
+              发送信息... (@ 提醒, / 插件)
             </div>
           </div>
           <div
@@ -141,8 +141,4 @@ export const chat_form_tpl = `
       </form>
     </div>
   </div>
-</div>
-
-
-
-`;
+</div>`;

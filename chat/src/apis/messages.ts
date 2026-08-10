@@ -137,3 +137,29 @@ export const searchMessages = async (keyword: string, sessionId?: string) => {
   console.warn("[searchMessages] 返回结果不是数组，可能查询失败:", result);
   return [];
 };
+
+// apis/messages.ts（新增）
+/**
+ * 分页获取会话消息（按时间倒序取前 N 条，再反转升序）
+ * @param sessionId 会话 ID
+ * @param limit 每页数量
+ * @param before 可选，获取早于该时间戳的消息（用于向上加载）
+ * @returns 消息数组（按 created_at 升序排列）
+ */
+export const getMessagesBySessionWithLimit = async (
+  sessionId: string,
+  limit: number = 10,
+  before?: string
+) => {
+  let sql = `
+    SELECT * FROM messages 
+    WHERE session_id = '${sessionId}'
+  `;
+  if (before) {
+    sql += ` AND created_at < '${before}'`;
+  }
+  sql += ` ORDER BY created_at DESC LIMIT ${limit}`;
+  const rows = await dbQuery(sql);
+  // 反转顺序，使最早的消息在数组前面（便于按顺序渲染）
+  return rows.reverse();
+};

@@ -1,3 +1,4 @@
+import { generateUUID } from "../utils/uuid.ts"
 // src/apis/cloud.ts
 // 云端 LLM 调用（SiliconFlow），自动与本地数据库结合
 
@@ -54,7 +55,7 @@ export async function chatCompletion(params: {
   // 1. 处理会话：如果没有传入 sessionId，则自动创建新会话
   let sessionId = providedSessionId;
   if (!sessionId) {
-    const newId = crypto.randomUUID();
+    const newId = generateUUID();
     // 从消息中提取第一条用户消息作为标题
     const firstUserMsg = inputMessages.find(m => m.role === "user");
     const title = firstUserMsg ? firstUserMsg.content.slice(0, 30) : "新对话";
@@ -115,7 +116,7 @@ export async function chatCompletion(params: {
     const duplicate = existingMessages.some((m:any) => m.role === "user" && m.content === lastUserMsg.content);
     if (!duplicate) {
       await createMessage({
-        id: crypto.randomUUID(),
+        id: generateUUID(),
         session_id: sessionId,
         role: "user",
         content: lastUserMsg.content,
@@ -132,7 +133,7 @@ export async function chatCompletion(params: {
     let buffer = "";
     let assistantMessage = "";
     let reasoningContent = "";
-    let messageId = crypto.randomUUID();
+    let messageId = generateUUID();
 
     // 先创建一个待完成的 assistant 消息（状态为 pending）
     await createMessage({
@@ -201,7 +202,7 @@ export async function chatCompletion(params: {
     const reasoning = assistantMsg.reasoning_content || "";
 
     // 保存 assistant 回复
-    const messageId = crypto.randomUUID();
+    const messageId = generateUUID();
     await createMessage({
       id: messageId,
       session_id: sessionId,
