@@ -1,3 +1,148 @@
 export const chat_form_tpl = `
-<div class="aui-root aui-thread-root bg-background @container flex h-full flex-col" style="--thread-max-width:44rem;--composer-bg:color-mix(in oklab, var(--color-muted) 30%, var(--color-background));--composer-radius:1.5rem;--composer-padding:8px"><div data-slot="aui_thread-viewport" class="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-smooth px-4 pt-4 justify-center"><div class="aui-thread-welcome-root mx-auto mb-6 flex w-full max-w-(--thread-max-width) flex-col items-center px-4 text-center"><h1 class="aui-thread-welcome-message-inner fade-in slide-in-from-bottom-1 animate-in fill-mode-both text-2xl font-semibold duration-200">How can I help you today?</h1></div><div data-slot="aui_message-group" class="mb-14 flex flex-col gap-y-6 empty:hidden"></div><div class="aui-thread-viewport-footer bg-background mx-auto flex w-full max-w-(--thread-max-width) flex-col gap-4 overflow-visible pb-4 md:pb-6"><button data-slot="tooltip-trigger" data-variant="outline" data-size="icon" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center gap-2 text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-background hover:bg-accent hover:text-accent-foreground border shadow-xs aui-button-icon size-6 active:scale-90 aui-thread-scroll-to-bottom dark:border-border dark:bg-background dark:hover:bg-accent absolute -top-12 z-10 self-center rounded-full p-4 disabled:invisible" type="button" disabled="" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg><span class="aui-sr-only sr-only">Scroll to bottom</span></button><form class="aui-composer-root relative flex w-full flex-col"><div data-slot="aui_composer-shell" class="border-border/60 data-[dragging=true]:border-ring focus-within:border-border dark:border-muted-foreground/15 dark:focus-within:border-muted-foreground/30 flex w-full flex-col gap-2 rounded-(--composer-radius) border bg-(--composer-bg) p-(--composer-padding) shadow-[0_4px_16px_-8px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)] transition-[border-color,box-shadow] focus-within:shadow-[0_6px_24px_-8px_rgba(0,0,0,0.12),0_1px_2px_rgba(0,0,0,0.05)] data-[dragging=true]:border-dashed data-[dragging=true]:bg-[color-mix(in_oklab,var(--color-accent)_50%,var(--color-background))] dark:shadow-none"><div class="aui-composer-attachments flex w-full flex-row items-center gap-2 overflow-x-auto empty:hidden"></div><div class="aui-lexical-editor aui-composer-input [&amp;_.aui-lexical-placeholder]:text-muted-foreground/80 relative max-h-32 min-h-10 w-full resize-none bg-transparent px-2.5 py-1 text-base outline-none [&amp;_.aui-directive-chip]:inline-flex [&amp;_.aui-directive-chip]:items-baseline [&amp;_.aui-directive-chip]:gap-1 [&amp;_.aui-directive-chip]:rounded-md [&amp;_.aui-directive-chip]:bg-blue-100 [&amp;_.aui-directive-chip]:px-1.5 [&amp;_.aui-directive-chip]:py-0.5 [&amp;_.aui-directive-chip]:text-[13px] [&amp;_.aui-directive-chip]:leading-none [&amp;_.aui-directive-chip]:font-medium [&amp;_.aui-directive-chip]:text-blue-700 dark:[&amp;_.aui-directive-chip]:bg-blue-900/50 dark:[&amp;_.aui-directive-chip]:text-blue-300 [&amp;_.aui-directive-chip-icon]:self-center [&amp;_.aui-lexical-input]:min-h-lh [&amp;_.aui-lexical-input]:outline-none [&amp;_.aui-lexical-placeholder]:pointer-events-none [&amp;_.aui-lexical-placeholder]:absolute [&amp;_.aui-lexical-placeholder]:top-0 [&amp;_.aui-lexical-placeholder]:right-0 [&amp;_.aui-lexical-placeholder]:left-0 [&amp;_.aui-lexical-placeholder]:truncate [&amp;_.aui-lexical-placeholder]:px-2.5 [&amp;_.aui-lexical-placeholder]:py-1" style="overflow-y:auto"><div class="aui-lexical-input" contenteditable="true" role="textbox" spellcheck="true" style="user-select: text; white-space: pre-wrap; word-break: break-word;" data-lexical-editor="true"><p dir="auto"><br></p></div><div class="aui-lexical-placeholder">Send a message... (@ to mention, / for commands)</div></div><div class="aui-composer-action-wrapper relative flex items-center justify-between"><div class="flex items-center gap-1"><button data-slot="tooltip-trigger" data-variant="ghost" data-size="icon" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground aui-button-icon active:scale-90 aui-composer-add-attachment hover:bg-muted-foreground/15 dark:border-muted-foreground/15 dark:hover:bg-muted-foreground/30 size-7 rounded-full p-1 text-xs font-semibold" aria-label="Add Attachment" type="button" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus aui-attachment-add-icon size-4.5 stroke-[1.5px]" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg><span class="aui-sr-only sr-only">Add Attachment</span></button><button type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed" data-slot="model-selector-trigger" data-variant="ghost" data-size="sm" role="combobox" class="focus-visible:ring-ring/50 flex w-fit items-center justify-between gap-2 overflow-hidden whitespace-nowrap transition-colors outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground px-2.5 py-1.5 text-xs h-7 rounded-full"><span data-slot="model-selector-value" class="flex min-w-0 items-center gap-2"><span class="flex size-4 shrink-0 items-center justify-center [&amp;_svg]:size-4"><img alt="GPT-5.4 Nano" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="size-4" style="color:transparent" src="/icons/openai.svg"></span><span class="truncate font-medium">GPT-5.4 Nano</span></span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down size-4 opacity-50" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button></div><div class="flex items-center gap-1.5"><button data-slot="tooltip-trigger" data-variant="ghost" data-size="icon" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center gap-2 text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 aui-button-icon p-1 active:scale-90 aui-composer-dictate size-7 rounded-full" type="button" aria-label="Start voice input" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mic aui-composer-dictate-icon size-4" aria-hidden="true"><path d="M12 19v3"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><rect x="9" y="2" width="6" height="13" rx="3"></rect></svg><span class="aui-sr-only sr-only">Voice input</span></button><button data-slot="tooltip-trigger" data-variant="default" data-size="icon" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center gap-2 text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-primary text-primary-foreground hover:bg-primary/90 aui-button-icon p-1 active:scale-90 aui-composer-send size-7 rounded-full" type="button" aria-label="Send message" disabled="" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up aui-composer-send-icon size-4.5" aria-hidden="true"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg><span class="aui-sr-only sr-only">Send message</span></button></div></div></div></form><div class="aui-thread-welcome-suggestions-shell min-h-19"><div class="aui-thread-welcome-suggestions flex w-full flex-col gap-2 px-4"><div class="w-full scrollbar-none overflow-x-auto"><div class="mx-auto flex w-max items-center gap-2"><button data-slot="button" data-variant="ghost" data-size="default" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground dark:hover:bg-accent/50 has-[&gt;svg]:px-3 aui-thread-welcome-suggestion text-foreground hover:bg-muted border-border/60 h-auto gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-normal whitespace-nowrap transition-colors [&amp;_svg]:size-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-sun" aria-hidden="true"><path d="M12 2v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="M20 12h2"></path><path d="m19.07 4.93-1.41 1.41"></path><path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"></path><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"></path></svg>Weather</button><button data-slot="button" data-variant="ghost" data-size="default" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground dark:hover:bg-accent/50 has-[&gt;svg]:px-3 aui-thread-welcome-suggestion text-foreground hover:bg-muted border-border/60 h-auto gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-normal whitespace-nowrap transition-colors [&amp;_svg]:size-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml" aria-hidden="true"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>Code</button><button data-slot="button" data-variant="ghost" data-size="default" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground dark:hover:bg-accent/50 has-[&gt;svg]:px-3 aui-thread-welcome-suggestion text-foreground hover:bg-muted border-border/60 h-auto gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-normal whitespace-nowrap transition-colors [&amp;_svg]:size-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-line" aria-hidden="true"><path d="M13 21h8"></path><path d="m15 5 4 4"></path><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path></svg>Write</button><button data-slot="button" data-variant="ghost" data-size="default" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground dark:hover:bg-accent/50 has-[&gt;svg]:px-3 aui-thread-welcome-suggestion text-foreground hover:bg-muted border-border/60 h-auto gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-normal whitespace-nowrap transition-colors [&amp;_svg]:size-4 bg-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>Analyze</button><button data-slot="button" data-variant="ghost" data-size="default" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground dark:hover:bg-accent/50 has-[&gt;svg]:px-3 aui-thread-welcome-suggestion text-foreground hover:bg-muted border-border/60 h-auto gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-normal whitespace-nowrap transition-colors [&amp;_svg]:size-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>Brainstorm</button></div></div><div class="fade-in slide-in-from-top-1 animate-in w-full scrollbar-none overflow-x-auto duration-200"><div class="mx-auto flex w-max items-center gap-2"><button data-slot="button" data-variant="ghost" data-size="default" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground dark:hover:bg-accent/50 has-[&gt;svg]:px-3 aui-thread-welcome-suggestion text-foreground hover:bg-muted border-border/60 h-auto gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-normal whitespace-nowrap transition-colors [&amp;_svg]:size-4">React vs Vue vs Svelte</button><button data-slot="button" data-variant="ghost" data-size="default" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground dark:hover:bg-accent/50 has-[&gt;svg]:px-3 aui-thread-welcome-suggestion text-foreground hover:bg-muted border-border/60 h-auto gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-normal whitespace-nowrap transition-colors [&amp;_svg]:size-4">GDP of US, China, Japan</button><button data-slot="button" data-variant="ghost" data-size="default" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground dark:hover:bg-accent/50 has-[&gt;svg]:px-3 aui-thread-welcome-suggestion text-foreground hover:bg-muted border-border/60 h-auto gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-normal whitespace-nowrap transition-colors [&amp;_svg]:size-4">pros and cons of SSR</button></div></div></div></div></div></div></div>
+<div
+  class="aui-root aui-thread-root bg-background @container flex h-full flex-col"
+  style="--thread-max-width:44rem;--composer-bg:color-mix(in oklab, var(--color-muted) 30%, var(--color-background));--composer-radius:1.5rem;--composer-padding:8px"
+>
+  <div
+    data-slot="aui_thread-viewport"
+    class="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-smooth px-4 pt-4 justify-center"
+  >
+    <div class="aui-thread-welcome-root mx-auto mb-6 flex w-full max-w-(--thread-max-width) flex-col items-center px-4 text-center">
+      <h1
+        class="aui-thread-welcome-message-inner fade-in slide-in-from-bottom-1 animate-in fill-mode-both text-2xl font-semibold duration-200"
+      >
+        开始新的设计
+      </h1>
+    </div>
+    <div
+      data-slot="aui_message-group"
+      class="mb-14 flex flex-col gap-y-6 empty:hidden"
+    ></div>
+    <div
+      class="aui-thread-viewport-footer bg-background mx-auto flex w-full max-w-(--thread-max-width) flex-col gap-4 overflow-visible pb-4 md:pb-6"
+    >
+      <button
+        data-slot="tooltip-trigger"
+        data-variant="outline"
+        data-size="icon"
+        class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center gap-2 text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-background hover:bg-accent hover:text-accent-foreground border shadow-xs aui-button-icon size-6 active:scale-90 aui-thread-scroll-to-bottom dark:border-border dark:bg-background dark:hover:bg-accent absolute -top-12 z-10 self-center rounded-full p-4 disabled:invisible"
+        type="button"
+        disabled=""
+        data-state="closed"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-arrow-down"
+          aria-hidden="true"
+        >
+          <path d="M12 5v14"></path>
+          <path d="m19 12-7 7-7-7"></path>
+        </svg>
+        <span class="aui-sr-only sr-only">Scroll to bottom</span>
+      </button>
+      <form class="aui-composer-root relative flex w-full flex-col">
+        <div
+          data-slot="aui_composer-shell"
+          class="border-border/60 data-[dragging=true]:border-ring focus-within:border-border dark:border-muted-foreground/15 dark:focus-within:border-muted-foreground/30 flex w-full flex-col gap-2 rounded-(--composer-radius) border bg-(--composer-bg) p-(--composer-padding) shadow-[0_4px_16px_-8px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)] transition-[border-color,box-shadow] focus-within:shadow-[0_6px_24px_-8px_rgba(0,0,0,0.12),0_1px_2px_rgba(0,0,0,0.05)] data-[dragging=true]:border-dashed data-[dragging=true]:bg-[color-mix(in_oklab,var(--color-accent)_50%,var(--color-background))] dark:shadow-none"
+        >
+          <div
+            class="aui-composer-attachments flex w-full flex-row items-center gap-2 overflow-x-auto empty:hidden"
+          ></div>
+          <div
+            class="aui-lexical-editor aui-composer-input [&amp;_.aui-lexical-placeholder]:text-muted-foreground/80 relative max-h-32 min-h-10 w-full resize-none bg-transparent px-2.5 py-1 text-base outline-none [&amp;_.aui-directive-chip]:inline-flex [&amp;_.aui-directive-chip]:items-baseline [&amp;_.aui-directive-chip]:gap-1 [&amp;_.aui-directive-chip]:rounded-md [&amp;_.aui-directive-chip]:bg-blue-100 [&amp;_.aui-directive-chip]:px-1.5 [&amp;_.aui-directive-chip]:py-0.5 [&amp;_.aui-directive-chip]:text-[13px] [&amp;_.aui-directive-chip]:leading-none [&amp;_.aui-directive-chip]:font-medium [&amp;_.aui-directive-chip]:text-blue-700 dark:[&amp;_.aui-directive-chip]:bg-blue-900/50 dark:[&amp;_.aui-directive-chip]:text-blue-300 [&amp;_.aui-directive-chip-icon]:self-center [&amp;_.aui-lexical-input]:min-h-lh [&amp;_.aui-lexical-input]:outline-none [&amp;_.aui-lexical-placeholder]:pointer-events-none [&amp;_.aui-lexical-placeholder]:absolute [&amp;_.aui-lexical-placeholder]:top-0 [&amp;_.aui-lexical-placeholder]:right-0 [&amp;_.aui-lexical-placeholder]:left-0 [&amp;_.aui-lexical-placeholder]:truncate [&amp;_.aui-lexical-placeholder]:px-2.5 [&amp;_.aui-lexical-placeholder]:py-1"
+            style="overflow-y:auto"
+          >
+            <div
+              class="aui-lexical-input"
+              contenteditable="true"
+              role="textbox"
+              spellcheck="true"
+              style="user-select: text; white-space: pre-wrap; word-break: break-word;"
+              data-lexical-editor="true"
+            >
+              <p dir="auto"><br /></p>
+            </div>
+            <div class="aui-lexical-placeholder">
+              Send a message... (@ to mention, / for commands)
+            </div>
+          </div>
+          <div
+            class="aui-composer-action-wrapper relative flex items-center justify-between"
+          >
+            <div class="flex items-center gap-1">
+              <button
+                data-slot="tooltip-trigger"
+                data-variant="ghost"
+                data-size="icon"
+                class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 hover:text-accent-foreground aui-button-icon active:scale-90 aui-composer-add-attachment hover:bg-muted-foreground/15 dark:border-muted-foreground/15 dark:hover:bg-muted-foreground/30 size-7 rounded-full p-1 text-xs font-semibold"
+                aria-label="Add Attachment"
+                type="button"
+                data-state="closed"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-plus aui-attachment-add-icon size-4.5 stroke-[1.5px]"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5v14"></path>
+                </svg>
+                <span class="aui-sr-only sr-only">Add Attachment</span>
+              </button>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button
+                data-slot="tooltip-trigger"
+                data-variant="default"
+                data-size="icon"
+                class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 inline-flex shrink-0 items-center justify-center gap-2 text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 bg-primary text-primary-foreground hover:bg-primary/90 aui-button-icon p-1 active:scale-90 aui-composer-send size-7 rounded-full"
+                type="button"
+                aria-label="Send message"
+                disabled=""
+                data-state="closed"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-up aui-composer-send-icon size-4.5"
+                  aria-hidden="true"
+                >
+                  <path d="m5 12 7-7 7 7"></path>
+                  <path d="M12 19V5"></path>
+                </svg>
+                <span class="aui-sr-only sr-only">Send message</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
 `;
