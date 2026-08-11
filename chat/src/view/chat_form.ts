@@ -71,7 +71,7 @@ export const chat_form_tpl = `
               <p dir="auto"><br /></p>
             </div>
             <div class="aui-lexical-placeholder">
-              发送信息... (@ 提醒, / 插件)
+              发送信息... (@ 提醒, / 工具)
             </div>
           </div>
           <div

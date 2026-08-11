@@ -1,6 +1,6 @@
 {
   "name": "chat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "chat for piksel",
   "keywords": ["piksel","ai", "chat"],
   "author": "funxdata",
@@ -8,6 +8,9 @@
   "license": "MIT",
   "dependencies-web": {},
   "exports": {
+    "./assets/css/release.css": "release.css",
+    "./assets/css/marked.css": "marked.css",
+    "./assets/marked.js": "marked.js",
     "./assets/project_app_0_0_1.js": "chat.js",
     "./assets/project_setup_0_0_1.js": "setup.js"
   },

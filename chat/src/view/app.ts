@@ -2,7 +2,7 @@ export const app_tpl = `
 <div id="chat-container" class="bg-muted/30 flex h-full w-full">
    <div id="chat-slidebar" class="flex h-full flex-col overflow-hidden transition-all duration-200 w-65">
        <div class="mt-2 flex h-12 shrink-0 items-center transition-[padding] duration-200 px-6">
-             <span class="text-foreground/90 ml-2 text-sm font-medium whitespace-nowrap transition-opacity duration-200">对话内容</span>
+             <span class="text-foreground/90 ml-2 text-sm font-medium whitespace-nowrap transition-opacity duration-200">对话列表</span>
         </div>
         <div class="chat-slidebar-info">
         </div>

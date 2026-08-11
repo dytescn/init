@@ -1,7 +1,7 @@
 export const slidebar_tpl = `
 <div class="relative w-65 flex-1 overflow-y-auto p-3">
     <div class="aui-root aui-thread-list-root flex flex-col gap-0.5">
-        <!-- 新建会话按钮（静态） -->
+        <!-- 新对话按钮 -->
         <a 
             data-slot="button" 
             data-variant="ghost" 
@@ -18,13 +18,17 @@ export const slidebar_tpl = `
             新对话
         </a>
 
+        <!-- 动态分组循环 -->
+        <% it.groups.forEach(function(group){ %>
         <div class="aui-thread-list-group-label text-muted-foreground px-2.5 pt-3 pb-1 text-xs font-medium">
-            Today
+            <%= group.label %>
         </div>
 
-        <% it.sessions.forEach(function(session){ %>
+        <% group.sessions.forEach(function(session){ %>
         <a class="aui-thread-list-item group hover:bg-muted focus-visible:bg-muted data-active:bg-muted relative flex h-8 items-center rounded-md transition-colors focus-visible:outline-none" 
-            href="/chat?uid=<%= session.id %>">
+            href="/chat?uid=<%= session.id %>"
+            <%= session.id === it.currentUid ? 'data-active="true"' : '' %>
+        >
             <button 
                 class="aui-thread-list-item-trigger flex h-full min-w-0 flex-1 items-center px-2.5 text-start text-sm group-hover:pe-9 group-has-data-[state=open]:pe-9 group-data-active:pe-9" 
                 type="button"
@@ -51,6 +55,7 @@ export const slidebar_tpl = `
                 <span class="sr-only">More options</span>
             </button>
         </a>
+        <% }) %>
         <% }) %>
     </div>
 </div>

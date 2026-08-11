@@ -52,12 +52,13 @@ export const renderMessage = (msg: Message): string=> {
   return TplToHtml.renderString(tpl, data);
 }
 
-// ---------- 第一次渲染初始化内容（批量插入） ----------
+// deno-lint-ignore no-explicit-any
 export const renderInitMessage = (rows: any[]) => {
   const container = getMessageContainer();
   // 清空容器
   container.innerHTML = "";
   // 转换数据
+  // deno-lint-ignore no-explicit-any
   const messages: Message[] = rows.map((row: any) => ({
     role: row.role,
     content: row.content,
