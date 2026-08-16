@@ -1,7 +1,8 @@
 // 修改后的 rout_init
-import type { PagesRouterInfo, Route } from "@funxdata/pages/routetype";
+import type { PagesRouterInfo } from "@funxdata/pages/routetype";
 import { get_router_info } from "../apis/route.ts";
 
+// deno-lint-ignore no-explicit-any
 const GlobalPagesRoute = (globalThis as any)["GlobalPagesRouter"] as PagesRouterInfo;
 
 export const rout_init = async () => {

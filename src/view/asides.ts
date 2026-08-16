@@ -1,11 +1,9 @@
 export const asides_tpl = `
    <div class="rowcolumn">
-      <a class="vg-asides-logo" href="/">
-        <img src="https://book.funxdata.com/public/img/webmanage/logo-sm.png"></a>
-        <div class="vg-asides-menus hover flex-auto mb-24 position-relative">
+      <a class="vg-asides-logo" href="/"><img src="https://uicdn.funxdata.com/assets/logo_piksel.png"></a>
+      <div class="vg-asides-menus hover flex-auto mb-24 position-relative">
           <div class="vg-asides-menus-content">
             <ul class="vg-menus" id="aside_tab">
-
               <% it.asides.forEach(function(rowitem){ %>
               <li class="vg-menus-li" id="aside_tab_project">
                 <a href="<%=rowitem.path%>">
@@ -16,17 +14,8 @@ export const asides_tpl = `
                 </a>
               </li>
               <% }) %>
-
            </ul>
           </div>
        </div>
-           <div id="user-info-btn" class="row rowcolumn align-center h-auto mb-20 gap-16" data-toggle="hide">
-             <button class="vg-asides-toggle vg-btn btn-icons btn-size-lg bg-gray-200 hide">
-               <i class="vg-icon ic-toggle"></i>
-             </button>
-             <div class="vg-avatar-bg avatar-size-lg border-radius-max cursor-pointer">
-                 <img src="/assets/imgs/default_avator2.png">
-             </div>
-        </div>
     </div>
 `;
