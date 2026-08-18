@@ -39,14 +39,12 @@ export const dbExec = async (sql: string, path: string = "router") => {
   return dbFetch('database', 'db_exec', { path, sql });
 };
 
-// ============ 核心：获取路由信息（完全兼容原 JSON 格式） ============
 export const get_router_info = async (): Promise<Route[]> => {
   const data = await dbQuery(`
     SELECT id, title, path, icon, hide, url, show, parent_id
     FROM routers 
-    WHERE hide = 0
     ORDER BY parent_id, id
-  `);
+  `); // 移除 WHERE hide = 0
 
   if (!Array.isArray(data) || data.length === 0) {
     return [];
@@ -62,7 +60,7 @@ export const get_router_info = async (): Promise<Route[]> => {
       const node = {
         title: item.title || '',
         icon: item.icon || '',
-        hide: item.hide === 1,    // 转为布尔
+        hide: item.hide === 1,
         path: item.path || '',
         child: [],
       };

@@ -3,7 +3,10 @@
   "specifiers": {
     "jsr:@deno/cache-dir@0.13.2": "0.13.2",
     "jsr:@deno/emit@0.46": "0.46.0",
+    "jsr:@funxdata/pages@^0.0.24": "0.0.24",
+    "jsr:@funxdata/template@~0.1.6": "0.1.9",
     "jsr:@funxdata/toolkit@*": "0.1.36",
+    "jsr:@funxdata/webdx@^0.0.9": "0.0.9",
     "jsr:@std/assert@0.223": "0.223.0",
     "jsr:@std/bytes@0.223": "0.223.0",
     "jsr:@std/fmt@0.223": "0.223.0",
@@ -22,7 +25,7 @@
     "npm:postcss-import@^16.1.1": "16.1.1_postcss@8.5.6",
     "npm:postcss-nested@^7.0.2": "7.0.2_postcss@8.5.6",
     "npm:postcss@^8.5.6": "8.5.6",
-    "npm:tailwindcss@^4.3.1": "4.3.2"
+    "npm:tailwindcss@^4.3.3": "4.3.3"
   },
   "jsr": {
     "@deno/cache-dir@0.13.2": {
@@ -41,6 +44,18 @@
         "jsr:@std/path@0.223"
       ]
     },
+    "@funxdata/pages@0.0.24": {
+      "integrity": "ebee6652a94f36e65537406302db92b63d0cdfd7924edf115915e15947f85a8e",
+      "dependencies": [
+        "jsr:@funxdata/template"
+      ]
+    },
+    "@funxdata/template@0.1.9": {
+      "integrity": "20543f5df9ab573d9b1e6ff7a63c646cb6b7cc90f5ce7da79df4313c8f5d25cf",
+      "dependencies": [
+        "jsr:@funxdata/pages"
+      ]
+    },
     "@funxdata/toolkit@0.1.36": {
       "integrity": "c45b12c2a6619fb3fa6539fc6a406bc46217d1807b2c8e402d92031f878ae3d7",
       "dependencies": [
@@ -56,6 +71,9 @@
         "npm:postcss-import",
         "npm:postcss-nested"
       ]
+    },
+    "@funxdata/webdx@0.0.9": {
+      "integrity": "165f8bca6371bf1c86d6f203037a26bc1d9c2528b99e578956b212354779eeba"
     },
     "@std/assert@0.223.0": {
       "integrity": "eb8d6d879d76e1cc431205bd346ed4d88dc051c6366365b1af47034b0670be24"
@@ -1006,8 +1024,8 @@
     "tailwindcss@4.1.18": {
       "integrity": "sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw=="
     },
-    "tailwindcss@4.3.2": {
-      "integrity": "sha512-WtctNNSH8A9jlMIqxzuYumOHU5uGZyRv0Q5svQl+oEPy5w84YpBxdb7MdqyiSPQge5jTJ6zFQLq0PFygdccSBA=="
+    "tailwindcss@4.3.3": {
+      "integrity": "sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ=="
     },
     "tapable@2.3.0": {
       "integrity": "sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg=="
@@ -1030,7 +1048,7 @@
       "jsr:@funxdata/funxdata@~0.1.36",
       "jsr:@funxdata/pages@^0.0.24",
       "jsr:@funxdata/webdx@^0.0.9",
-      "npm:tailwindcss@^4.3.1"
+      "npm:tailwindcss@^4.3.3"
     ]
   }
 }
