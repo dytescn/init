@@ -17,5 +17,10 @@ export const asides_tpl = `
            </ul>
           </div>
        </div>
+
+
+      <div id="all-setting-info" class="row rowcolumn align-center h-auto mb-20 gap-16" data-toggle="hide">
+        <button id="design-soft-info"  class="vg-asides-toggle vg-btn btn-icons btn-size-lg bg-gray-200"></button>
+      </div>
     </div>
 `;

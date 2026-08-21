@@ -31,6 +31,8 @@ export interface SoftwareInfo {
   id?: number;
   name: string;
   version: string;
+  major_version?: string;   // 新增
+  minor_version?: string;   // 新增
   install_path?: string;
   publisher?: string;
   install_date?: string;
@@ -52,8 +54,8 @@ const escapeSql = (str: string) => str.replace(/'/g, "''");
  */
 export const insertSoftware = async (data: Omit<SoftwareInfo, "id">) => {
   const columns = [
-    "name", "version", "install_path", "publisher", "install_date",
-    "exe_path", "status", "config", "child"
+    "name", "version", "major_version", "minor_version", "install_path",
+    "publisher", "install_date", "exe_path", "status", "config", "child"
   ];
   const values = columns.map(col => {
     const val = data[col as keyof typeof data] ?? "";
@@ -68,7 +70,6 @@ export const insertSoftware = async (data: Omit<SoftwareInfo, "id">) => {
 
 /**
  * 查询软件信息（可选条件）
- * @param condition SQL WHERE 条件，如 "status = '已启动'"
  */
 export const querySoftware = async (condition?: string) => {
   let sql = `SELECT * FROM ${TABLE_NAME}`;
@@ -76,7 +77,6 @@ export const querySoftware = async (condition?: string) => {
     sql += ` WHERE ${condition}`;
   }
   const result = await databaseRequest("db_query", { path: DB_PATH, sql });
-  // 后端返回格式可能为 { code, msg, data: [...] } 或 { code, msg, data: { list: [...] } }
   if (result.data?.list) return result.data.list;
   if (Array.isArray(result.data)) return result.data;
   return [];
@@ -113,8 +113,6 @@ export const deleteSoftware = async (id: number) => {
 
 /**
  * 同步：从 API 获取软件信息并插入/更新数据库
- * @param keyword 软件关键字
- * @param getInfoFn 获取软件信息的函数（从 designsoft.ts 导入）
  */
 export const syncSoftwareFromApi = async (
   keyword: string,
@@ -127,24 +125,32 @@ export const syncSoftwareFromApi = async (
   }
 
   for (const software of info.data.list) {
-    // 查询是否已存在（按名称和版本）
     const existing = await querySoftware(`name = '${escapeSql(software.name)}' AND version = '${escapeSql(software.version)}'`);
     if (existing.length > 0) {
-      // 已存在，更新
       await updateSoftware(existing[0].id, {
+        major_version: software.major_version || "",
+        minor_version: software.minor_version || "",
         install_path: software.install_path || "",
         updated_at: new Date().toISOString(),
       });
       console.log(`✅ 更新软件: ${software.name} (${software.version})`);
     } else {
-      // 不存在，插入
       await insertSoftware({
         name: software.name,
         version: software.version,
+        major_version: software.major_version || "",
+        minor_version: software.minor_version || "",
         install_path: software.install_path || "",
         status: "已安装但未启动",
       });
       console.log(`✅ 插入软件: ${software.name} (${software.version})`);
     }
   }
+};
+
+/**
+ * 获取数据库中所有已存储的软件列表
+ */
+export const getSoftwareList = async (): Promise<SoftwareInfo[]> => {
+  return await querySoftware();
 };
