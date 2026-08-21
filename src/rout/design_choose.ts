@@ -12,6 +12,9 @@ export const init_design_soft = () => {
   const setting_info_node = document.getElementById("all-setting-info") as HTMLElement;
   const design_choose_node = document.getElementById("design-soft-info") as HTMLElement;
   design_choose_node.innerHTML = icon_default;
+  design_choose_node.title = "选择设计软件";
+  design_choose_node.setAttribute('data-tooltip', '选择设计软件');
+
 
   design_choose_node.addEventListener("click", (event: Event) => {
     const toggleAction = setting_info_node.dataset.toggle; // "hide" / "show"

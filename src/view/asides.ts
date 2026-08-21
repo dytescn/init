@@ -20,7 +20,7 @@ export const asides_tpl = `
 
 
       <div id="all-setting-info" class="row rowcolumn align-center h-auto mb-20 gap-16" data-toggle="hide">
-        <button id="design-soft-info"  class="vg-asides-toggle vg-btn btn-icons btn-size-lg bg-gray-200"></button>
+        <buttom id="design-soft-info" class="vg-avatar-bg avatar-size-lg border-radius-max cursor-pointer"></buttom>
       </div>
     </div>
 `;
